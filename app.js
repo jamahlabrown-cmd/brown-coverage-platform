@@ -1,4 +1,4 @@
-const brokers = [
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhnaXV2dWR6eWFhZGpob2hwbGlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyMzAzNzksImV4cCI6MjA5NzgwNjM3OX0.S5VYlMPuYyQgn_9TR7RiHwTLx8XQBvXNi6FCg-PdBY8const brokers = [
   { name: "Maria Lopez", state: ["NC","SC","GA","FL","TX"], products: ["Marketplace Health","Life Insurance","Final Expense","Dental and Vision","Critical Illness"], language: "Spanish", tier: "Partner" },
   { name: "Marcus Green", state: ["NC","VA","SC"], products: ["Marketplace Health","Life Insurance","Final Expense"], language: "English", tier: "Growth" },
   { name: "Olivia Carter", state: ["GA","FL","TX"], products: ["Life Insurance","Final Expense","Critical Illness"], language: "English", tier: "Growth" },
