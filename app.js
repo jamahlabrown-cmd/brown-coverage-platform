@@ -1,4 +1,25 @@
-const brokers = [
+const SUPABASE_URL = "https://hgiuvudzyaadjhohplik.supabase.co/rest/v1/";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhnaXV2dWR6eWFhZGpob2hwbGlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyMzAzNzksImV4cCI6MjA5NzgwNjM3OX0.S5VYlMPuYyQgn_9TR7RiHwTLx8XQBvXNi6FCg-PdBY8";
+
+async function saveLeadToSupabase(lead) {
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "apikey": SUPABASE_ANON_KEY,
+      "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
+      "Prefer": "return=minimal"
+    },
+    body: JSON.stringify(lead)
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(errorText);
+  }
+
+  return true;
+}const brokers = [
   { name: "Maria Lopez", state: ["NC","SC","GA","FL","TX"], products: ["Marketplace Health","Life Insurance","Final Expense","Dental and Vision","Critical Illness"], language: "Spanish", tier: "Partner" },
   { name: "Marcus Green", state: ["NC","VA","SC"], products: ["Marketplace Health","Life Insurance","Final Expense"], language: "English", tier: "Growth" },
   { name: "Olivia Carter", state: ["GA","FL","TX"], products: ["Life Insurance","Final Expense","Critical Illness"], language: "English", tier: "Growth" },
