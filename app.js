@@ -1,5 +1,5 @@
-const SUPABASE_URL = "https://YOURPROJECT.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR_PUBLIC_ANON_OR_PUBLISHABLE_KEY";
+const SUPABASE_URL = "https://hgiuvudzyaadjhohplik.supabase.co/rest/v1/";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhnaXV2dWR6eWFhZGpob2hwbGlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyMzAzNzksImV4cCI6MjA5NzgwNjM3OX0.S5VYlMPuYyQgn_9TR7RiHwTLx8XQBvXNi6FCg-PdBY8";
 
 async function saveLeadToSupabase(lead) {
   const response = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
