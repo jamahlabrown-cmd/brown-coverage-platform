@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Broker Portal — Brown Coverage</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">B</span>
+      <span>Brown Coverage</span>
+    </a>
+    <div class="nav-links">
+      <a href="quote.html">Find coverage</a>
+      <a href="broker.html">Broker portal</a>
+      <a href="admin.html">Admin</a>
+      <a href="spanish.html">Español</a>
+      <a href="become-a-broker.html">Become a broker</a>
+    </div>
+    <a class="button primary" href="quote.html">Get started</a>
+  </div>
+</nav>
+
+<main class="dashboard">
+  <div class="container">
+    <span class="kicker">Broker dashboard prototype</span>
+    <h1>Broker portal.</h1>
+    <p class="lead">A workspace for independent brokers to manage company-generated leads, broker-owned clients, follow-ups, documents, consent, and commissions.</p>
+    <div class="dashboard-grid">
+      <aside class="card sidebar">
+        <a class="side-link active" href="#">Leads</a>
+        <a class="side-link" href="#">Clients</a>
+        <a class="side-link" href="#">Tasks</a>
+        <a class="side-link" href="#">Appointments</a>
+        <a class="side-link" href="#">Compliance vault</a>
+        <a class="side-link" href="#">Commissions</a>
+        <a class="side-link" href="#">Training</a>
+      </aside>
+      <section>
+        <div class="metric-grid">
+          <div class="card metric"><b id="metricTotal">0</b><span>Total leads</span></div>
+          <div class="card metric"><b id="metricHot">0</b><span>Hot / active</span></div>
+          <div class="card metric"><b id="metricSpanish">0</b><span>Spanish leads</span></div>
+          <div class="card metric"><b id="metricProducts">0</b><span>Product lines</span></div>
+        </div>
+        <div class="card table-card">
+          <table>
+            <thead>
+              <tr><th>Lead</th><th>Customer</th><th>Need</th><th>Source</th><th>Status</th><th>Assigned broker</th><th>Company share</th></tr>
+            </thead>
+            <tbody id="leadTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo"><span class="logo-mark">B</span><span>Brown Coverage</span></div>
+      <p class="small">Prototype for a Brown-sponsored digital insurance platform. Not a live insurance quote site.</p>
+    </div>
+    <div>
+      <p class="small"><strong>Demo disclaimer:</strong> This prototype is for planning and investor/demo use only. Final site copy, licensing, carrier appointments, consent language, privacy, SMS/email permissions, and Marketplace workflows must be reviewed before public launch.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+
+</body>
+</html>
