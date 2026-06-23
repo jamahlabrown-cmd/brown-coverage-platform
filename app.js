@@ -166,7 +166,97 @@ function setupQuoteForm() {
       created: "Just now",
       contact: data.phone || data.email || ""
     };
-    saveLead(lead);
+    try {
+  await saveLeadToSupabase({
+    first_name: data.firstName || "",
+    last_name: data.lastName || "",
+    phone: data.phone || "",
+    email: data.email || "",
+    product: product,
+    state: state,
+    language: language,
+    contact_time: data.contactTime || "",
+    household_size: data.householdSize || "",
+    income: data.income || "",
+    coverage_amount: data.coverageAmount || "",
+    tobacco: data.tobacco || "",
+    urgency: data.urgency || "",
+    budget: data.budget || "",
+    needs: data.needs || "",
+    source: "Website quote flow",
+    status: "New",
+    assigned_broker: broker.name,
+    lead_quality: "Qualified",
+    company_share: "15%",
+    consent_contact: true
+  });
+
+  try {
+  await saveLeadToSupabase({
+    first_name: data.firstName || "",
+    last_name: data.lastName || "",
+    phone: data.phone || "",
+    email: data.email || "",
+    product: product,
+    state: state,
+    language: language,
+    contact_time: data.contactTime || "",
+    household_size: data.householdSize || "",
+    income: data.income || "",
+    coverage_amount: data.coverageAmount || "",
+    tobacco: data.tobacco || "",
+    urgency: data.urgency || "",
+    budget: data.budget || "",
+    needs: data.needs || "",
+    source: "Website quote flow",
+    status: "New",
+    assigned_broker: broker.name,
+    lead_quality: "Qualified",
+    company_share: "15%",
+    consent_contact: true
+  });
+
+  try {
+  await saveLeadToSupabase({
+    first_name: data.firstName || "",
+    last_name: data.lastName || "",
+    phone: data.phone || "",
+    email: data.email || "",
+    product: product,
+    state: state,
+    language: language,
+    contact_time: data.contactTime || "",
+    household_size: data.householdSize || "",
+    income: data.income || "",
+    coverage_amount: data.coverageAmount || "",
+    tobacco: data.tobacco || "",
+    urgency: data.urgency || "",
+    budget: data.budget || "",
+    needs: data.needs || "",
+    source: "Website quote flow",
+    status: "New",
+    assigned_broker: broker.name,
+    lead_quality: "Qualified",
+    company_share: "15%",
+    consent_contact: true
+  });
+
+  saveLead(lead);
+} catch (error) {
+  alert("Lead could not be saved online yet. Check Supabase settings.");
+  console.error(error);
+  return;
+}
+} catch (error) {
+  alert("Lead could not be saved online yet. Check Supabase settings.");
+  console.error(error);
+  return;
+}
+} catch (error) {
+  alert("Lead could not be saved online yet. Check Supabase settings.");
+  console.error(error);
+  return;
+}
     const result = document.querySelector("#quoteResult");
     result.classList.remove("hidden");
     result.innerHTML = `
