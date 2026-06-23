@@ -125,7 +125,7 @@ function setupQuoteForm() {
   document.querySelectorAll(".option").forEach(o => o.addEventListener("click", renderProductFields));
   renderProductFields();
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form).entries());
     const product = data.product || "Marketplace Health";
